@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<body>
+<script>
+// JavaScript code to sort an array of integers
+function sortArrays(arr)
+{
+	// finding the length of array 'arr'
+	let length = arr.length;
+	
+	// sorting using a loop
+	for (let j = 0; j < length-1;j++) {
+		// checking the condition
+		if (arr[j] < arr[j+1]) {
+			// swapping the elements
+			let temp = arr[j];
+			arr[j] = arr[j+1];
+			arr[j+1] = temp;
+			j=-1;
+		}
+	}
+	return arr;
+}
+// declaring main method
+let arr=[1,9,6,7,6,5,1];
+document.write("Original array: [" + (arr).join(", ")+ "]<br>");
+// sorting the array
+arr= sortArrays(arr);
+document.write("Sorted array: [" + (arr).join(", ")+ "]<br>");
+</script>
+</body>
+</html>
